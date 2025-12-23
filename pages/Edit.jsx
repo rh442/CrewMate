@@ -4,7 +4,7 @@ import './Edit.css'
 import {supabase} from '../client.js'
 
 const Edit = ({data}) => {
-
+    const navigate = useNavigate();
     const {id} = useParams()
     const [crew, setCrew] = useState({id: null, Name: "", Level: 1,Type:"", Description: ""})
 
@@ -101,3 +101,4 @@ const Edit = ({data}) => {
 
 
 export default Edit
+
