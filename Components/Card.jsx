@@ -1,16 +1,17 @@
 import { useState } from 'react'
 import './Card.css'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { supabase } from '../client'
 
 const Card = (props) =>  {
     const deleteCrew = async (event) =>{
-            event.preventDefault()
+        const navigate = useNavigate()
+            event.preventDefault();
             await supabase
                 .from('Crew')
                 .delete()
                 .eq('id',props.id)
-            window.location='/Gallery'
+           navigate('/Gallery')
         }
 
 
@@ -28,5 +29,6 @@ const Card = (props) =>  {
       </div>
   );
 };
+
 
 export default Card
