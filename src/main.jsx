@@ -12,7 +12,7 @@ import View from '../pages/View.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/crewmate">
+    <BrowserRouter basename="/CrewMate">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<App />} />
