@@ -4,8 +4,9 @@ import { Link,useNavigate } from 'react-router-dom'
 import { supabase } from '../client'
 
 const Card = (props) =>  {
+    const navigate = useNavigate()
     const deleteCrew = async (event) =>{
-        const navigate = useNavigate()
+        
             event.preventDefault();
             await supabase
                 .from('Crew')
@@ -32,3 +33,4 @@ const Card = (props) =>  {
 
 
 export default Card
+
