@@ -15,7 +15,7 @@ const Read = (props) =>{
             setCrew(data)
         }
         fetchCrew();
-    },[props])
+    },[])
     return(
         <>
             <div className="ReadPosts">
@@ -38,4 +38,5 @@ const Read = (props) =>{
         </>
     )
 }
+
 export default Read
