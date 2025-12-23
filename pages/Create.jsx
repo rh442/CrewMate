@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Create.css'
 import {supabase} from '../client.js'
+import {useNavigate} from 'react-router-dom'
 
 
 const Create = () => {
@@ -33,7 +34,7 @@ const Create = () => {
                 .from('Crew')
                 .insert({Type: data.Type, Level:data.Level, Name:data.Name, Description:data.Description})
                 .select()
-            window.location = "/Gallery";
+             navigate("/Gallery");
         }
     return (
         <>
@@ -78,5 +79,6 @@ const Create = () => {
         </>
     )
 }
+
 
 export default Create
