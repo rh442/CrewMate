@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 
 
 const Create = () => {
+    const navigate = useNavigate();
     const [data,setData] = useState(
         {
             Type:'',
@@ -82,3 +83,4 @@ const Create = () => {
 
 
 export default Create
+
