@@ -1,3 +1,4 @@
+//
 import { useState } from 'react'
 import './Card.css'
 import { Link,useNavigate } from 'react-router-dom'
@@ -33,4 +34,5 @@ const Card = (props) =>  {
 
 
 export default Card
+
 
