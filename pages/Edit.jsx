@@ -14,7 +14,7 @@ const Edit = ({data}) => {
                 .from('Crew')
                 .delete()
                 .eq('id',id)
-             navigate("/Gallery");
+             navigate("Gallery");
         }
 
     useEffect(() => {
@@ -101,4 +101,5 @@ const Edit = ({data}) => {
 
 
 export default Edit
+
 
