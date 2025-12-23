@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams,useNavigate } from 'react-router-dom'
 import './Edit.css'
 import {supabase} from '../client.js'
 
@@ -14,7 +14,7 @@ const Edit = ({data}) => {
                 .from('Crew')
                 .delete()
                 .eq('id',id)
-            window.location='/Gallery'
+             navigate("/Gallery");
         }
 
     useEffect(() => {
@@ -49,7 +49,7 @@ const Edit = ({data}) => {
             .from('Crew')
             .update({Name: crew.Name, Level: crew.Level, Type: crew.Type,Description: crew.Description})
             .eq('id',id)
-        window.location='/Gallery'
+         navigate("/Gallery");
     }
 
    
@@ -98,5 +98,6 @@ const Edit = ({data}) => {
         </div>
     )
 }
+
 
 export default Edit
